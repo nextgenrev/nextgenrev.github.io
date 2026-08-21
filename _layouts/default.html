@@ -35,7 +35,7 @@ ga('send', 'pageview');
 {% endif %}
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
-<body class="{{layout}}">
+<body class="{{layout}} d-flex flex-column min-vh-100">
 	<!-- defer loading of font and font awesome -->
 	<noscript id="deferred-styles">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -90,7 +90,7 @@ ga('send', 'pageview');
 <!-- End Navigation
 ================================================== -->
 
-<div class="site-content">
+<div class="site-content flex-grow-1">
 
 <div class="container">
 
@@ -114,12 +114,14 @@ ga('send', 'pageview');
 
 
 
+</div> <!-- /.site-content -->
+
 <!-- Begin Footer
 ================================================== -->
-<footer class="footer">
+<footer class="footer mt-auto py-4" style="background-color: #1F2937; color: #F9FAFB;">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" style="font-size: 0.95rem; font-weight: 500;">
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }}. All rights reserved.
             </div>
         </div>
@@ -127,8 +129,6 @@ ga('send', 'pageview');
 </footer>
 <!-- End Footer
 ================================================== -->
-
-</div> <!-- /.site-content -->
 
 <!-- Scripts
 ================================================== -->
