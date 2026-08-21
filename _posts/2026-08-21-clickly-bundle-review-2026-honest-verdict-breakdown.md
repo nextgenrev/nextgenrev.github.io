@@ -3,6 +3,7 @@ layout: post
 title: "Clickly BUNDLE Review 2026 – Honest Verdict & Breakdown"
 author: nextgenrev
 categories: [Video &amp; Design Tools]
+image: https://nextgreviews.com/wp-content/uploads/2026/08/Clickly-BUNDLE-review-1787323206-scaled.png
 description: "Clickly BUNDLE Review - is it worth your money? Complete breakdown of features, clickly bundle pricing, pros and cons. Read my honest analysis."
 ---
 
