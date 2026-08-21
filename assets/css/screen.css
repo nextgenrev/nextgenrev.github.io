@@ -319,8 +319,8 @@ span.post-read-more a:hover {
     padding-bottom: 12px;
     font-size: 0.8rem;
     color: #111827;
-    margin: 0;
     margin-top: auto;
+    margin-bottom: 0px !important;
     position: relative;
     background: #F3F4F6;
 }
