@@ -3,6 +3,44 @@ layout: default
 title: Home
 ---
 
+{% if page.url == "/" %}
+
+<!-- Featured
+================================================== -->
+<section class="featured-posts">
+    <div class="section-title">
+        <h2 style="color: #1D4ED8; font-weight: 700;"><span>Featured</span></h2>
+    </div>
+    <div class="row">
+
+    {% for post in site.posts %}
+
+        {% include featuredbox.html %}
+
+    {% endfor %}
+
+    </div>
+</section>
+
+{% endif %}
+
+{% if site.mailchimp-list %}
+<!-- Newsletter
+================================================== -->
+<div class="newsletter-section mb-5 mt-5 p-5 rounded text-center" style="border: 2px solid #1D4ED8; box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.15), 0 8px 10px -6px rgba(29, 78, 216, 0.1); background: linear-gradient(145deg, #ffffff, #f3f4f6);">
+	<div class="container">
+		<h3 class="mb-2" style="font-weight: 700; color: #1D4ED8;">Never miss a review!</h3>
+        <p class="text-muted mb-4">Subscribe to our newsletter and get the latest tool analyses delivered straight to your inbox.</p>
+        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
+            <div class="mc-field-group d-flex justify-content-center">
+            <input type="email" placeholder="Enter your email address" name="EMAIL" class="form-control mr-2" style="max-width: 400px; border-radius: 8px; border: 1px solid #d1d5db; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);" id="mce-EMAIL" autocomplete="on" required>
+            <button type="submit" name="subscribe" class="btn btn-primary" style="border-radius: 8px; font-weight: 600; padding: 0.5rem 1.5rem; transition: all 0.3s ease;">Subscribe</button>
+            </div>
+        </form>
+	</div>
+</div>
+{% endif %}
+
 <!-- Posts Index
 ================================================== -->
 <section class="recent-posts">
@@ -32,19 +70,3 @@ title: Home
 </span>
 </div>
 
-{% if site.mailchimp-list %}
-<!-- Newsletter
-================================================== -->
-<div class="newsletter-section mb-5 mt-5 p-5 rounded text-center" style="border: 2px solid #1D4ED8; box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.15), 0 8px 10px -6px rgba(29, 78, 216, 0.1); background: linear-gradient(145deg, #ffffff, #f3f4f6);">
-	<div class="container">
-		<h3 class="mb-2" style="font-weight: 700; color: #1D4ED8;">Never miss a review!</h3>
-        <p class="text-muted mb-4">Subscribe to our newsletter and get the latest tool analyses delivered straight to your inbox.</p>
-        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
-            <div class="mc-field-group d-flex justify-content-center">
-            <input type="email" placeholder="Enter your email address" name="EMAIL" class="form-control mr-2" style="max-width: 400px; border-radius: 8px; border: 1px solid #d1d5db; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);" id="mce-EMAIL" autocomplete="on" required>
-            <button type="submit" name="subscribe" class="btn btn-primary" style="border-radius: 8px; font-weight: 600; padding: 0.5rem 1.5rem; transition: all 0.3s ease;">Subscribe</button>
-            </div>
-        </form>
-	</div>
-</div>
-{% endif %}
