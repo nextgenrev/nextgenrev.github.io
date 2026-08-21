@@ -28,13 +28,29 @@ title: Home
 
 {% endif %}
 
+{% if site.mailchimp-list %}
+<!-- Newsletter
+================================================== -->
+<div class="newsletter-section mb-5 mt-5 p-5 bg-light rounded text-center">
+	<div class="container">
+		<h4 class="mb-3">Never miss a <b>review</b> from us, subscribe to our newsletter!</h4>
+        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
+            <div class="mc-field-group d-flex justify-content-center">
+            <input type="email" placeholder="Email" name="EMAIL" class="form-control mr-2 w-50" id="mce-EMAIL" autocomplete="on" required>
+            <button type="submit" name="subscribe" class="btn btn-primary">Subscribe</button>
+            </div>
+        </form>
+	</div>
+</div>
+{% endif %}
+
 <!-- Posts Index
 ================================================== -->
 <section class="recent-posts">
 
     <div class="section-title">
 
-        <h2><span>All Stories</span></h2>
+        <h2><span>All Reviews</span></h2>
 
     </div>
 
