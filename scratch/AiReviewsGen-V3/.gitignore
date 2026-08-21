@@ -1,0 +1,34 @@
+# WordPress and Git Ignore Rules
+
+# Core WordPress files
+wp-admin/
+wp-includes/
+wp-config.php
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+
+# Uploads and cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/backups/
+wp-content/upgrade/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+debug.log
+error_log
+
+# Node/Composer (if applicable)
+node_modules/
+vendor/
+
+# Any local config files
+.env
+local-config.php

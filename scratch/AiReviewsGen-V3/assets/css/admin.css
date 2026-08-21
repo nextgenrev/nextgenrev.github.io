@@ -1,0 +1,415 @@
+/**
+ * AI Review Generator Pro - Admin Styles
+ *
+ * @package AIReviewGeneratorPro
+ * @since   8.0.0
+ */
+
+/* Font Face */
+@font-face {
+    font-family: 'Qatar2022';
+    src: url('/wp-content/uploads/ai-review-fonts/Qatar2022Arabic-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* Settings Page */
+.airg-settings-wrap {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.airg-settings-header {
+    background: linear-gradient(180deg, #5b9bd5 0%, #2b5797 100%);
+    color: #fff;
+    padding: 18px 24px;
+    border-radius: 10px 10px 0 0;
+}
+
+.airg-settings-header h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+}
+
+.airg-settings-header p {
+    margin: 4px 0 0;
+    opacity: 0.85;
+    font-size: 12px;
+}
+
+.airg-settings-card {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.airg-section {
+    margin-bottom: 18px;
+}
+
+.airg-section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #2b5797;
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.airg-select,
+.airg-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.airg-select:focus,
+.airg-input:focus {
+    outline: none;
+    border-color: #5b9bd5;
+}
+
+.provider-section {
+    display: none;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 14px;
+    margin-top: 12px;
+}
+
+.provider-section.active {
+    display: block;
+}
+
+.provider-section h3 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    color: #374151;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.airg-input-group {
+    margin-bottom: 10px;
+}
+
+.airg-input-group:last-child {
+    margin-bottom: 0;
+}
+
+.airg-input-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: #6b7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.airg-info-box {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-top: 14px;
+}
+
+.airg-info-box p {
+    margin: 0;
+    font-size: 11px;
+    color: #0369a1;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.airg-submit-btn {
+    background: linear-gradient(180deg, #34d058 0%, #22863a 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 14px;
+}
+
+.airg-submit-btn:hover {
+    opacity: 0.9;
+}
+
+/* Generator Page */
+.airg-dashboard {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.airg-header {
+    background: linear-gradient(180deg, #5b9bd5 0%, #2b5797 100%);
+    border-radius: 10px 10px 0 0;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.airg-header h1 {
+    font-family: 'Qatar2022', sans-serif;
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.airg-header p {
+    margin: 4px 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 12px;
+}
+
+.airg-main-card {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+}
+
+.airg-form-section h2 {
+    font-family: 'Qatar2022', sans-serif;
+    font-size: 14px;
+    color: #2b5797;
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.airg-field {
+    margin-bottom: 14px;
+}
+
+.airg-field label {
+    display: block;
+    font-weight: 600;
+    font-size: 11px;
+    color: #374151;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.airg-field input,
+.airg-field select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 13px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.airg-field input:focus,
+.airg-field select:focus {
+    outline: none;
+    border-color: #5b9bd5;
+}
+
+.airg-btn-generate {
+    width: 100%;
+    padding: 12px;
+    font-family: 'Qatar2022', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(180deg, #34d058 0%, #22863a 100%);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+.airg-btn-generate:hover {
+    opacity: 0.9;
+}
+
+.airg-btn-generate:disabled {
+    background: linear-gradient(180deg, #9ca3af 0%, #6b7280 100%);
+    cursor: not-allowed;
+}
+
+.airg-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.airg-feature {
+    text-align: center;
+    padding: 10px 6px;
+    background: #f8fafc;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+
+.airg-feature i {
+    font-size: 18px;
+    color: #5b9bd5;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.airg-feature-text {
+    font-size: 10px;
+    color: #64748b;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.airg-warning {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.airg-warning i {
+    font-size: 16px;
+    color: #d97706;
+}
+
+.airg-warning-text {
+    font-size: 12px;
+    color: #92400e;
+}
+
+.airg-warning-text a {
+    color: #92400e;
+    font-weight: 600;
+}
+
+/* Loader */
+#airg-loader {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.loader-box {
+    text-align: center;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 16px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid #5b9bd5;
+    border-radius: 50%;
+    animation: airg-spin 0.8s linear infinite;
+}
+
+@keyframes airg-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-title {
+    font-family: 'Qatar2022', sans-serif;
+    font-size: 16px;
+    color: #2b5797;
+    margin: 0 0 6px;
+}
+
+.loader-sub {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0 0 16px;
+}
+
+.loader-steps {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.l-step {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    background: #f8fafc;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+}
+
+.l-step.active {
+    background: linear-gradient(180deg, #5b9bd5 0%, #2b5797 100%);
+    border-color: transparent;
+}
+
+.l-step.done {
+    background: #ecfdf3;
+    border-color: #86efac;
+}
+
+.l-step.done i,
+.l-step.done .l-step-title {
+    color: #166534;
+}
+
+.l-step.active .l-step-title {
+    color: #fff;
+}
+
+.l-step i {
+    font-size: 11px;
+}
+
+.l-step-title {
+    font-size: 10px;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.loader-tip {
+    margin-top: 16px;
+    font-size: 11px;
+    color: #9ca3af;
+}

@@ -1,0 +1,105 @@
+/*
+ * NextGReviews affiliate CTA
+ * Accessible, action-led, and deliberately unelevated.
+ */
+body.single-post.airg-generated-review a.airg-cta,
+.airg-review-post a.airg-cta,
+.airg-review-post--legacy a.airg-cta {
+    display: inline-flex !important;
+    min-height: 52px !important;
+    max-width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 13px 24px !important;
+    border: 2px solid #1d4ed8 !important;
+    border-radius: 8px !important;
+    color: #ffffff !important;
+    background: #1d4ed8 !important;
+    box-shadow: none !important;
+    font-family: "Söhne", "Helvetica Neue", Arial, sans-serif !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease !important;
+}
+
+body.single-post.airg-generated-review a.airg-cta::before,
+.airg-review-post a.airg-cta::before,
+.airg-review-post--legacy a.airg-cta::before {
+    content: "\f25a";
+    display: inline-block;
+    flex: 0 0 auto;
+    color: currentColor;
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free", "Font Awesome 6 Free", sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 1;
+    transform: rotate(-8deg);
+    transition: transform 180ms ease;
+}
+
+body.single-post.airg-generated-review a.airg-cta:hover,
+.airg-review-post a.airg-cta:hover,
+.airg-review-post--legacy a.airg-cta:hover {
+    border-color: #1e40af !important;
+    color: #ffffff !important;
+    background: #1e40af !important;
+    box-shadow: none !important;
+    transform: translateY(-1px) !important;
+}
+
+body.single-post.airg-generated-review a.airg-cta:hover::before,
+.airg-review-post a.airg-cta:hover::before,
+.airg-review-post--legacy a.airg-cta:hover::before {
+    transform: translateX(2px) rotate(0deg);
+}
+
+body.single-post.airg-generated-review a.airg-cta:active,
+.airg-review-post a.airg-cta:active,
+.airg-review-post--legacy a.airg-cta:active {
+    box-shadow: none !important;
+    transform: scale(0.98) !important;
+}
+
+body.single-post.airg-generated-review a.airg-cta:focus-visible,
+.airg-review-post a.airg-cta:focus-visible,
+.airg-review-post--legacy a.airg-cta:focus-visible {
+    border-color: #1e40af !important;
+    outline: 3px solid #1d4ed8 !important;
+    outline-offset: 3px !important;
+    box-shadow: none !important;
+}
+
+@media (max-width: 640px) {
+    body.single-post.airg-generated-review .airg-cta-wrap a.airg-cta,
+    .airg-review-post .airg-cta-wrap a.airg-cta,
+    .airg-review-post--legacy .airg-cta-wrap a.airg-cta {
+        width: 100% !important;
+        padding-inline: 18px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.single-post.airg-generated-review a.airg-cta,
+    .airg-review-post a.airg-cta,
+    .airg-review-post--legacy a.airg-cta,
+    body.single-post.airg-generated-review a.airg-cta::before,
+    .airg-review-post a.airg-cta::before,
+    .airg-review-post--legacy a.airg-cta::before {
+        transition: none !important;
+    }
+
+    body.single-post.airg-generated-review a.airg-cta:hover,
+    .airg-review-post a.airg-cta:hover,
+    .airg-review-post--legacy a.airg-cta:hover,
+    body.single-post.airg-generated-review a.airg-cta:hover::before,
+    .airg-review-post a.airg-cta:hover::before,
+    .airg-review-post--legacy a.airg-cta:hover::before {
+        transform: none !important;
+    }
+}

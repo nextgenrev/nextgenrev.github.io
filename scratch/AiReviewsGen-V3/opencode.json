@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "novamira-mynurseinprogres": {
+      "type": "local",
+      "command": ["npx", "-y", "@automattic/mcp-wordpress-remote@latest"],
+      "enabled": true,
+      "env": {
+        "WP_API_URL": "https://mynurseinprogress.com/wp-json/mcp/novamira",
+        "WP_API_USERNAME": "dana102030galka@gmail.com",
+        "WP_API_PASSWORD": "6N9BcswRBiMtOkONVgxPpuSQ"
+      }
+    }
+  }
+}
