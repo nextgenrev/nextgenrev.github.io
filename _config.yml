@@ -1,10 +1,10 @@
 # Site
-name: "Mediumish"
-title: "Mediumish"
-description: "Jekyll template, Medium styled, free for bloggers."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
-baseurl: /mediumish-theme-jekyll
+name: "NextGen Reviews"
+title: "NextGen Reviews"
+description: "Reviews of newly launched tools and software."
+logo: 'assets/images/logongr.png'
+favicon: 'assets/images/27737.png'
+baseurl: ""
 google_analytics: 'UA-46278016-1'
 disqus: 'demowebsite'
 mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
@@ -13,23 +13,14 @@ permalink: /:title/
 
 # Authors
 authors:
-  sal:
-    name: Sal
-    display_name: Sal
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Mediumish, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John    
+  paul:
+    name: Paul Dowd
+    display_name: Paul
     avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "This is the author box. Write a short description of the author here. You are currently previewing Mediumish demo, a Jekyll template compatible with Github pages."
+    email: contact@nextgreviews.com
+    web: https://nextgreviews.com
+    twitter: 
+    description: "I started this platform because I was tired of buying digital products that didn't live up to the hype. As a digital marketer, I know that the right tool can change your business – but the wrong one can waste your budget and your time."
 
 # Plugins
 plugins:
