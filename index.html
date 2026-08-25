@@ -1,93 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGen Reviews — Reviews</title>
-    <meta name="description" content="In-depth product reviews by NextGen Reviews">
-    <link rel="canonical" href="https://nextgenrev.github.io/nextgenrev.github.io/">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-    <style>
-        *, *::before, *::after { box-sizing: border-box; }
-        body {
-            margin: 0; padding: 0;
-            background: #f8fafc;
-            font-family: "Söhne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: #1a1a1a;
-            -webkit-font-smoothing: antialiased;
-        }
-        .airg-index-wrap {
-            max-width: 860px; margin: 0 auto; padding: 60px 24px 80px;
-        }
-        .airg-index-header {
-            text-align: center; margin-bottom: 50px;
-        }
-        .airg-index-header h1 {
-            font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em;
-            color: #000; margin: 0 0 8px;
-        }
-        .airg-index-header p {
-            font-size: 1.1rem; color: #6b7280; margin: 0;
-        }
-        .airg-index-grid {
-            display: grid; grid-template-columns: 1fr; gap: 18px;
-        }
-        .airg-index-card {
-            display: flex; justify-content: space-between; align-items: center;
-            background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px;
-            padding: 22px 28px; text-decoration: none; color: inherit;
-            transition: border-color 180ms ease, box-shadow 180ms ease;
-        }
-        .airg-index-card:hover {
-            border-color: #1d4ed8; box-shadow: 0 2px 12px rgba(29,78,216,0.08);
-        }
-        .airg-index-card-title {
-            font-size: 1.1rem; font-weight: 700; color: #000; margin: 0 0 4px;
-        }
-        .airg-index-card-date {
-            font-size: 0.85rem; color: #9ca3af;
-        }
-        .airg-index-card-arrow {
-            font-size: 1.2rem; color: #1d4ed8; flex-shrink: 0; margin-left: 16px;
-        }
-        .airg-index-footer {
-            text-align: center; margin-top: 60px; font-size: 0.85rem; color: #9ca3af;
-        }
-        .airg-index-empty {
-            text-align: center; padding: 60px 20px; color: #9ca3af; font-size: 1.1rem;
-        }
-        @media (max-width: 640px) {
-            .airg-index-wrap { padding: 30px 14px 60px; }
-            .airg-index-header h1 { font-size: 1.6rem; }
-            .airg-index-card { padding: 16px 18px; }
-        }
-    </style>
-</head>
-<body>
-<div class="airg-index-wrap">
-    <header class="airg-index-header">
-        <h1>NextGen Reviews</h1>
-        <p>In-depth, honest product reviews</p>
-    </header>
-    <div class="airg-index-grid">
-        <a href="https://nextgenrev.github.io/nextgenrev.github.io/_posts/2026-08-25-articalize-elite-review-2026-honest-verdict-breakdown.html" class="airg-index-card">
-            <div>
-                <h2 class="airg-index-card-title">Articalize Elite Review 2026 – Honest Verdict &amp; Breakdown</h2>
-                <span class="airg-index-card-date">August 25, 2026</span>
-            </div>
-            <span class="airg-index-card-arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
-        <a href="https://nextgenrev.github.io/nextgenrev.github.io/high-ticket-automator-review-2026-honest-verdict-breakdown.html" class="airg-index-card">
-            <div>
-                <h2 class="airg-index-card-title">High Ticket Automator Review 2026 – Honest Verdict &amp; Breakdown</h2>
-                <span class="airg-index-card-date">August 19, 2026</span>
-            </div>
-            <span class="airg-index-card-arrow"><i class="fas fa-arrow-right"></i></span>
-        </a>
+---
+layout: default
+title: Home
+---
+
+<!-- Posts Index
+================================================== -->
+<section class="recent-posts">
+
+    <div class="section-title">
+        <h2 style="color: #1D4ED8; font-weight: 700;"><span>All Reviews</span></h2>
     </div>
-    <footer class="airg-index-footer">
-        <p>&copy; 2026 NextGen Reviews</p>
-    </footer>
+
+    <div class="row listrecent">
+
+        {% for post in paginator.posts %}
+
+        {% include postbox.html %}
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+<!-- Pagination
+================================================== -->
+<div class="bottompagination">
+<div class="pointerup"><i class="fa fa-caret-up"></i></div>
+<span class="navigation" role="navigation">
+    {% include pagination.html %}
+</span>
 </div>
-</body>
-</html>
+
+{% if site.mailchimp-list %}
+<!-- Newsletter
+================================================== -->
+<div class="newsletter-section mb-5 mt-5 p-5 rounded text-center" style="border: 2px solid #1D4ED8; box-shadow: 0 10px 25px -5px rgba(29, 78, 216, 0.15), 0 8px 10px -6px rgba(29, 78, 216, 0.1); background: linear-gradient(145deg, #ffffff, #f3f4f6);">
+	<div class="container">
+		<h3 class="mb-2" style="font-weight: 700; color: #1D4ED8;">Never miss a review!</h3>
+        <p class="text-muted mb-4">Subscribe to our newsletter and get the latest tool analyses delivered straight to your inbox.</p>
+        <form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate" target="_blank" novalidate>
+            <div class="mc-field-group d-flex justify-content-center">
+            <input type="email" placeholder="Enter your email address" name="EMAIL" class="form-control mr-2" style="max-width: 400px; border-radius: 8px; border: 1px solid #d1d5db; box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);" id="mce-EMAIL" autocomplete="on" required>
+            <button type="submit" name="subscribe" class="btn btn-primary" style="border-radius: 8px; font-weight: 600; padding: 0.5rem 1.5rem; transition: all 0.3s ease;">Subscribe</button>
+            </div>
+        </form>
+	</div>
+</div>
+{% endif %}
