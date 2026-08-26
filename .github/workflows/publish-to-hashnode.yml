@@ -27,4 +27,4 @@ jobs:
           publication-host: blog.nextgreviews.com
           posts-directory: _posts
           max-files: 10
-          dry-run: true
+          dry-run: false
