@@ -1,0 +1,26 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    {% if post.image %}
+    <image:image>
+      <image:loc>{% if post.image contains 'http' %}{{ post.image }}{% else %}{{ site.url }}{{ site.baseurl }}{{ post.image }}{% endif %}</image:loc>
+      <image:title>{{ post.title | escape }}</image:title>
+    </image:image>
+    {% endif %}
+  </url>
+  {% endfor %}
+</urlset>
