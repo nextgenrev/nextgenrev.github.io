@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - "_posts/**/*.md"
+      - "_hashnode_posts/*.md"
 
 permissions:
   contents: read
@@ -25,6 +25,6 @@ jobs:
         with:
           access-token: ${{ secrets.HASHNODE_PAT }}
           publication-host: blog.nextgreviews.com
-          posts-directory: _posts
+          posts-directory: _hashnode_posts
           max-files: 10
           dry-run: false
